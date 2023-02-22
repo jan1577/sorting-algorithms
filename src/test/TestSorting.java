@@ -66,9 +66,9 @@ public class TestSorting {
         assertArrayEquals(expected, InsertionSort.sort(testArray));
         // SelectionSort
         assertArrayEquals(expected, SelectionSort.sort(testArray));
-        // RadixSort
+        // RadixSort - only works for positive numbers
         ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException = assertThrows(ArrayIndexOutOfBoundsException.class, () ->
-                RadixSort.sort(testArray), "ZeroDivisionError");
+                RadixSort.sort(testArray), "IndexOutOfBoundsException");
     }
 
     @Test
