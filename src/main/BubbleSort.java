@@ -9,10 +9,10 @@ public class BubbleSort {
         boolean isSorted = false;
         int iterations = 0;
 
-        while(!isSorted){
+        while(!isSorted) {
             isSorted = true;
 
-            for (int i=0; i < array.length - 1 - iterations; i++) {
+            for (int i = 0; i < array.length - 1 - iterations; i++) {
                 if (array[i] > array[i + 1]) {
                     isSorted = false;
                     swapNumbers(array, i, i + 1);
