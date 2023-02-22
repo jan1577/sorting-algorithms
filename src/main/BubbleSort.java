@@ -17,7 +17,6 @@ public class BubbleSort {
                     isSorted = false;
                     swapNumbers(array, i, i + 1);
                 }
-                System.out.println(Arrays.toString(array));
             }
             iterations += 1;
         }
