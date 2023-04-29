@@ -9,6 +9,7 @@ import main.BubbleSort;
 import main.InsertionSort;
 import main.SelectionSort;
 import main.RadixSort;
+import main.QuickSort;
 
 public class TestSorting {
 
@@ -23,7 +24,8 @@ public class TestSorting {
         assertArrayEquals(expected, SelectionSort.sort(testArray));
         //RadixSort
         assertArrayEquals(expected, RadixSort.sort(testArray));
-
+        //QuickSort
+        assertArrayEquals(expected, QuickSort.sort(testArray));
     }
 
     @Test
@@ -37,6 +39,8 @@ public class TestSorting {
         assertArrayEquals(sortedArray, SelectionSort.sort(sortedArray));
         //RadixSort
         assertArrayEquals(sortedArray, RadixSort.sort(sortedArray));
+        //QuickSort
+        assertArrayEquals(sortedArray, QuickSort.sort(sortedArray));
 
     }
 
@@ -53,6 +57,8 @@ public class TestSorting {
         assertArrayEquals(expected, SelectionSort.sort(testArray));
         // RadixSort
         assertArrayEquals(expected, SelectionSort.sort(testArray));
+        // QuickSort
+        assertArrayEquals(expected, QuickSort.sort(testArray));
     }
 
     @Test
@@ -66,9 +72,11 @@ public class TestSorting {
         assertArrayEquals(expected, InsertionSort.sort(testArray));
         // SelectionSort
         assertArrayEquals(expected, SelectionSort.sort(testArray));
-        // RadixSort - only works for positive numbers
+        // RadixSort - only works for positive numbers as implemented
         ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException = assertThrows(ArrayIndexOutOfBoundsException.class, () ->
                 RadixSort.sort(testArray), "IndexOutOfBoundsException");
+        //QuickSort
+        assertArrayEquals(expected, QuickSort.sort(testArray));
     }
 
     @Test
@@ -83,6 +91,7 @@ public class TestSorting {
         assertArrayEquals(emptyArray, SelectionSort.sort(emptyArray));
         //RadixSort
         assertArrayEquals(emptyArray, RadixSort.sort(emptyArray));
-
+        //QuickSort
+        assertArrayEquals(emptyArray, QuickSort.sort(emptyArray));
     }
 }

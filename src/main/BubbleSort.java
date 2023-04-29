@@ -1,7 +1,5 @@
 package main;
 
-import java.util.Arrays;
-
 public class BubbleSort {
 
     public static int[] sort(int[]array){

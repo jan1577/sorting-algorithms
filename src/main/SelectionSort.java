@@ -1,7 +1,4 @@
 package main;
-
-import java.util.*;
-
 public class SelectionSort {
     public static int[] sort(int[] array) {
 
