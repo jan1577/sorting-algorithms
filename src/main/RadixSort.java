@@ -19,13 +19,11 @@ public class RadixSort {
     }
 
     public static int[] countSort(int[] array, int digit) {
-
         int[] counts = new int[10];
         int[] sorted = new int[array.length];
 
         // for every number, get digit and increase counter in counts
         for (int i = 0; i < array.length; i++) {
-            // get the digit
             int num = getNthDigit(array[i], digit);
             counts[num] += 1;
         }
@@ -35,7 +33,6 @@ public class RadixSort {
         }
         // loop through array backwards and place numbers in sorted array
         for (int i = array.length - 1; i >= 0; i--) {
-            // get digit of number
             int num = getNthDigit(array[i], digit);
             // get last number from counts where number could be placed and update this index in sorted
             counts[num] -= 1;

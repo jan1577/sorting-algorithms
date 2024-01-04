@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-// import classes
 import main.BubbleSort;
 import main.InsertionSort;
 import main.SelectionSort;
 import main.RadixSort;
 import main.QuickSort;
+import main.StoogeSort;
 
 public class TestSorting {
 
@@ -26,6 +26,8 @@ public class TestSorting {
         assertArrayEquals(expected, RadixSort.sort(testArray));
         //QuickSort
         assertArrayEquals(expected, QuickSort.sort(testArray));
+        //StoogeSort
+        assertArrayEquals(expected, StoogeSort.sort(testArray));
     }
 
     @Test
@@ -41,7 +43,8 @@ public class TestSorting {
         assertArrayEquals(sortedArray, RadixSort.sort(sortedArray));
         //QuickSort
         assertArrayEquals(sortedArray, QuickSort.sort(sortedArray));
-
+        //StoogeSort
+        assertArrayEquals(sortedArray, StoogeSort.sort(sortedArray));
     }
 
     @Test
@@ -59,6 +62,8 @@ public class TestSorting {
         assertArrayEquals(expected, SelectionSort.sort(testArray));
         // QuickSort
         assertArrayEquals(expected, QuickSort.sort(testArray));
+        //StoogeSort
+        assertArrayEquals(expected, StoogeSort.sort(testArray));
     }
 
     @Test
@@ -77,6 +82,8 @@ public class TestSorting {
                 RadixSort.sort(testArray), "IndexOutOfBoundsException");
         //QuickSort
         assertArrayEquals(expected, QuickSort.sort(testArray));
+        //StoogeSort
+        assertArrayEquals(expected, StoogeSort.sort(testArray));
     }
 
     @Test
@@ -93,5 +100,7 @@ public class TestSorting {
         assertArrayEquals(emptyArray, RadixSort.sort(emptyArray));
         //QuickSort
         assertArrayEquals(emptyArray, QuickSort.sort(emptyArray));
+        //StoogeSort
+        assertArrayEquals(emptyArray, StoogeSort.sort(emptyArray));
     }
 }

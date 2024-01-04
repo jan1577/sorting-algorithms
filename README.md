@@ -8,3 +8,4 @@ Currently features
 - InsertionSort
 - RadixSort
 - SelectionSort
+- StoogeSort
