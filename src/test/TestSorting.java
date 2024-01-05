@@ -1,16 +1,9 @@
 package test;
 
+import main.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import main.Sorter;
-import main.BubbleSort;
-import main.InsertionSort;
-import main.SelectionSort;
-import main.RadixSort;
-import main.QuickSort;
-import main.StoogeSort;
 
 public class TestSorting {
     @Test
@@ -43,6 +36,11 @@ public class TestSorting {
         testAlgorithm(new StoogeSort(), true);
     }
 
+    @Test
+    public void testMergeSort() {
+        testAlgorithm(new MergeSort(), true);
+    }
+
     private void testAlgorithm(Sorter sorter, boolean negativeNumbers) {
         // test array of length 1
         testSort(sorter, new int[]{1}, new int[]{1});
@@ -56,6 +54,8 @@ public class TestSorting {
         }
         // test empty array
         testSort(sorter, new int[]{}, new int[]{});
+        // test with duplicates
+        testSort(sorter, new int[]{0,1,5,5,4,9,14,7,14,19,23}, new int[]{0,1,4,5,5,7,9,14,14,19,23});
     }
 
     private void testSort(Sorter sorter, int[] input, int[] expected) {
