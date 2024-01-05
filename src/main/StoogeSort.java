@@ -1,7 +1,7 @@
 package main;
 
-public class StoogeSort {
-    public static int[] sort(int[] array){
+public class StoogeSort implements Sorter {
+    public int[] sort(int[] array){
         stoogeSort(array, 0, array.length-1);
         return array;
     }

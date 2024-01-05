@@ -1,8 +1,8 @@
 package main;
 
-public class BubbleSort {
+public class BubbleSort implements Sorter {
 
-    public static int[] sort(int[]array){
+    public int[] sort(int[]array){
 
         boolean isSorted = false;
         int iterations = 0;

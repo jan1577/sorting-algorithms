@@ -1,8 +1,8 @@
 package main;
 
-public class InsertionSort {
+public class InsertionSort implements Sorter {
 
-    public static int[] sort(int[] array) {
+    public int[] sort(int[] array) {
 
         for (int i = 1; i < array.length; i++) {
 

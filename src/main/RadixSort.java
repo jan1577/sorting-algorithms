@@ -1,8 +1,8 @@
 package main;
 
-public class RadixSort {
+public class RadixSort implements Sorter {
 
-    public static int[] sort(int[] array) {
+    public int[] sort(int[] array) {
         // get max number of the array to get the max number of digits
         int maxNumber = Integer.MIN_VALUE;
         for (int i = 0; i < array.length; i++) {

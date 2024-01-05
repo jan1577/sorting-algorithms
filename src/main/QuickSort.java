@@ -1,7 +1,7 @@
 package main;
 
-public class QuickSort {
-    public static int[] sort(int[] array){
+public class QuickSort implements Sorter {
+    public int[] sort(int[] array){
         quickSort(array, 0, array.length -1);
         return array;
     }
